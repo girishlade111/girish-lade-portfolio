@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: var(--font-serif-display), "Playfair Display", Georgia, serif;
+  --font-sans: var(--font-sans-grotesk), "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  
+  --color-accent: #FFCE00;
+  --color-accent-hover: #E5BA00;
+  --color-card: #F4F3F0;
+  --color-card-border: #E6E5E0;
+  --color-muted-text: #666666;
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #000000;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans-grotesk), "Plus Jakarta Sans", sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom editorial typography utilities */
+.font-editorial {
+  font-family: var(--font-serif-display), "Playfair Display", Georgia, serif;
+  letter-spacing: -0.03em;
+  line-height: 0.95;
+}
+
+.font-grotesk {
+  font-family: var(--font-sans-grotesk), "Plus Jakarta Sans", sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #ffffff;
+}
+::-webkit-scrollbar-thumb {
+  background: #d4d4d4;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a3a3a3;
+}
